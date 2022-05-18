@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+<header>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-ftn">
+        <div class="container">
+            <a class="navbar-brand" href="#shedule">Тренировки</a>
+            <a class="navbar-brand" href="#rates">Абонементы</a>
+            <a class="navbar-brand" href="#faq">FAQ</a>
+        </div>
+        </div>
+    </nav>
+    <div class="container header-ftn">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center text-white">Fitnesssssssss</h1>
+                <div class="info-ftn">
+                    <p class="text-end text-white">Стань выше, быстрее, сильнее. Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit. Voluptatem autem recusandae optio? Vitae quaerat ducimus, dolores,
+                        blanditiis
+                        reiciendis hic, rem porro est sapiente tempore minima. Labore nisi porro aliquam ipsa.</p>
+                </div>
+                <div class="it_div">
+                    <iv class="ftn_triangle">
+                </div>
+                <a href="#rates" class="btn btn-ftn btn-lg text-uppercase fw-semibold">Подробнее</a>
+            </div>
+        </div>
+
+    </div>
+</header>
+<main>
+    <section id="rates">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="img-wrapper">
+                        <img src=img/123.jpg class="d-block" alt="...">
+                    </div>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Тариф 1</h1>
+                            <p>Описание 1</p>
+                            <p><a class="btn-ftn btn btn-lg btn-primary" href="#faq">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-wrapper">
+                        <img src=img/1.jfif class="d-block" alt="...">
+                    </div>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Тариф 2</h1>
+                            <p>Описание 2</p>
+                            <p><a class="btn-ftn btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-wrapper">
+                        <img src=img/1.jfif class="d-block" alt="...">
+                    </div>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Тариф 3</h1>
+                            <p>Описание 3</p>
+                            <p><a class="btn-ftn btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="shedule">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <div class="idance">
+            <div class="schedule content-block">
+                <div class="container">
+                    <h2 data-aos="zoom-in-up" class="aos-init aos-animate">Расписание занятий</h2>
+
+                    <div class="timetable">
+                        <nav class="nav nav-tabs">
+                            <a id="mon" class="shedule-ftn nav-link">Mon</a>
+                            <a id="tue" class="shedule-ftn nav-link">Tue</a>
+                            <a id="wed" class="shedule-ftn nav-link">Wed</a>
+                            <a id="thu" class="shedule-ftn nav-link">Thu</a>
+                            <a id="fri" class="shedule-ftn nav-link">Fri</a>
+                            <a id="sat" class="shedule-ftn nav-link">Sat</a>
+                            <a id="sun" class="shedule-ftn nav-link">Sun</a>
+                        </nav>
+                        <div class="tab-content">
+                            <div class="tab-pane show active">
+                                <div class="row">
+                                    <div th:each="event: ${events}"
+                                         th:class="'card-ftn ' + ${event.tagDay}+ ' col-md-6'">
+                                        <div class="timetable-item">
+                                            <div class="timetable-item-img">
+                                                <img src="https://via.placeholder.com/100x80/008B8B/000000">
+                                            </div>
+                                            <div class="timetable-item-main">
+                                                <div class="timetable-item-time" th:text="${event.time}"></div>
+                                                <div class="timetable-item-name"
+                                                     th:text="${event.name}"></div>
+                                                <div class="timetable-item-description"
+                                                     th:text="${event.description}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item" th:each="faq, iter: ${faqs}">
+                <h2 class="accordion-header" th:id="'flush-heading' + ${iter.index}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            th:data-bs-target="'#flush-collapse' + ${iter.index}" aria-expanded="false"
+                            th:aria-controls="'flush-collapse' + ${iter.index}"
+                            th:text="${faq.question}">
+                    </button>
+                </h2>
+                <div th:id="'flush-collapse' + ${iter.index}" class="accordion-collapse collapse"
+                     th:aria-labelledby="'flush-heading' + ${iter.index}"
+                     data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body" th:text="${faq.answer}"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="text-center text-white" style="background-color: #0a4275;">
+    <div class="container p-4 pb-0">
+        <section class="">
+            <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">Присондиняйся к нам!</span>
+                <button type="button" class="btn btn-outline-light btn-rounded">
+                    тык
+                </button>
+            </p>
+        </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 ksenideni
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+<script src="scripts/script.js"></script>
+</body>
+
+</html>
