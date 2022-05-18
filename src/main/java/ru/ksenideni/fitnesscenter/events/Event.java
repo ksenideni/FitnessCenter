@@ -1,12 +1,10 @@
 package ru.ksenideni.fitnesscenter.events;
 
 import lombok.*;
-import org.hibernate.annotations.Fetch;
 import ru.ksenideni.fitnesscenter.training.Training;
 
 import javax.persistence.*;
 import java.time.LocalTime;
-import java.util.Calendar;
 
 @Getter
 @Setter

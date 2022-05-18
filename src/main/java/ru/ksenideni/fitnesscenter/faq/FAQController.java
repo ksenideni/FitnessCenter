@@ -14,7 +14,7 @@ public class FAQController {
     private final FAQService faqService;
 
     @GetMapping
-    public List<FAQ> findAll(){
+    public List<FAQ> findAll() {
         return faqService.findAll();
     }
 }

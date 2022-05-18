@@ -33,9 +33,6 @@
                         blanditiis
                         reiciendis hic, rem porro est sapiente tempore minima. Labore nisi porro aliquam ipsa.</p>
                 </div>
-                <div class="it_div">
-                    <iv class="ftn_triangle">
-                </div>
                 <a href="#rates" class="btn btn-ftn btn-lg text-uppercase fw-semibold">Подробнее</a>
             </div>
         </div>
@@ -54,39 +51,16 @@
                         aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div th:each="rate, iter:${rates}"
+                     th:class="${iter.index == 0} ? 'carousel-item active' : 'carousel-item'">
                     <div class="img-wrapper">
-                        <img src=img/123.jpg class="d-block" alt="...">
+                        <img src=img/123.jpg class="d-block">
                     </div>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Тариф 1</h1>
-                            <p>Описание 1</p>
-                            <p><a class="btn-ftn btn btn-lg btn-primary" href="#faq">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img-wrapper">
-                        <img src=img/1.jfif class="d-block" alt="...">
-                    </div>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Тариф 2</h1>
-                            <p>Описание 2</p>
-                            <p><a class="btn-ftn btn btn-lg btn-primary" href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img-wrapper">
-                        <img src=img/1.jfif class="d-block" alt="...">
-                    </div>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Тариф 3</h1>
-                            <p>Описание 3</p>
-                            <p><a class="btn-ftn btn btn-lg btn-primary" href="#">Learn more</a></p>
+                            <h1 th:text="${rate.name}"></h1>
+                            <p th:text="${rate.description}"></p>
+                            <p><a class="btn-ftn btn btn-lg btn-primary" href="#faq">Узнать больше</a></p>
                         </div>
                     </div>
                 </div>
