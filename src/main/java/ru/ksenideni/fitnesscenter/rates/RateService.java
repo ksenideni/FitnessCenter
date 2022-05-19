@@ -13,4 +13,12 @@ public class RateService {
     public List<Rate> findAll() {
         return rateRepository.findAll();
     }
+
+    public void deleteById(Long id) {
+        rateRepository.deleteById(id);
+    }
+
+    public void create(Rate rate) {
+        rateRepository.save(rate);
+    }
 }
