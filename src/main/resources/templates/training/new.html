@@ -13,15 +13,15 @@
 <body>
 <section>
     <div class="container">
-        <form th:action="@{/faqs}" th:method="POST" th:object="${faq}">
+        <form th:action="@{/training}" th:method="POST" th:object="${training}">
             <div class="mb-3">
-                <label class="form-label" for="question">Новый вопрос</label>
-                <input aria-describedby="emailHelp" class="form-control" id="question" th:field="*{question}"
+                <label class="form-label" for="name">Новый заголовок</label>
+                <input aria-describedby="emailHelp" class="form-control" id="name" th:field="*{name}"
                        type="text">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="answer">Новый ответ</label>
-                <input class="form-control" id="answer" th:field="*{answer}" type="text">
+                <label class="form-label" for="description">Новое описание</label>
+                <input class="form-control" id="description" th:field="*{description}" type="text">
             </div>
             <button class="btn btn-primary" type="submit">Сохранить</button>
         </form>

@@ -20,10 +20,10 @@ CREATE TABLE events
 (
     id          BIGINT PRIMARY KEY DEFAULT nextval('events_id_seq'),
     training_id BIGINT,
-    start_time   TIME,
-    end_time     TIME,
-    day_of_week   INT,
-    FOREIGN KEY (training_id) REFERENCES training (id)
+    start_time  TIME,
+    end_time    TIME,
+    day_of_week INT,
+    FOREIGN KEY (training_id) REFERENCES training (id) ON DELETE CASCADE
 );
 
 CREATE TABLE users

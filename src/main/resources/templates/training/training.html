@@ -12,10 +12,10 @@
 
 <body>
 <section>
-    <div class="container-fluid" th:each="rate:${rates}">
-        <h1 th:text="${rate.name}"></h1>
-        <p th:text="${rate.description}"></p>
-        <form th:action="@{/rates/{id}(id=${rate.getId()})}" th:method="DELETE">
+    <div class="container-fluid" th:each="training:${trainings}">
+        <h1 th:text="${training.name}"></h1>
+        <p th:text="${training.description}"></p>
+        <form th:action="@{/training/{id}(id=${training.getId()})}" th:method="DELETE">
             <input class="btn btn-primary" type="submit" value="Удалить"/>
         </form>
     </div>

@@ -3,27 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet">
 </head>
 
 <body>
 <section>
     <div class="container">
-        <form th:method="POST" th:action="@{/rates}" th:object="${rate}">
+        <form th:action="@{/rates}" th:method="POST" th:object="${rate}">
             <div class="mb-3">
-                <label for="name" class="form-label">Новый заголовок</label>
-                <input type="text" th:field="*{name}" class="form-control" id="name"
-                       aria-describedby="emailHelp">
+                <label class="form-label" for="name">Новый заголовок</label>
+                <input aria-describedby="emailHelp" class="form-control" id="name" th:field="*{name}"
+                       type="text">
             </div>
             <div class="mb-3">
-                <label for="description" class="form-label">Новое описание</label>
-                <input type="text" th:field="*{description}" class="form-control" id="description">
+                <label class="form-label" for="description">Новое описание</label>
+                <input class="form-control" id="description" th:field="*{description}" type="text">
             </div>
-            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <button class="btn btn-primary" type="submit">Сохранить</button>
         </form>
     </div>
 </section>
