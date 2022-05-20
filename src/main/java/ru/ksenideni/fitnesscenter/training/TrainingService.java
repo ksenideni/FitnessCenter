@@ -21,4 +21,8 @@ public class TrainingService {
     public void create(Training training) {
         trainingRepository.save(training);
     }
+
+    public Training getByName(String name) {
+        return trainingRepository.getByName(name);
+    }
 }

@@ -29,7 +29,7 @@ public class FAQController {
     }
 
     @PostMapping
-    public String create(@ModelAttribute("faq") FAQ faq) {
+    public String create(FAQ faq) {
         faqService.create(faq);
         return "redirect:/faqs";
     }

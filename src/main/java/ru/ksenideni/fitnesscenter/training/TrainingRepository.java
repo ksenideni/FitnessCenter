@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TrainingRepository extends JpaRepository<Training, Long> {
+    Training getByName(String name);
 }

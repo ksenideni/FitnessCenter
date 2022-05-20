@@ -18,7 +18,7 @@ public class RateController {
     }
 
     @GetMapping("/new")
-    public String newFAQ(@ModelAttribute("rate") Rate rate) {
+    public String newRate(@ModelAttribute("rate") Rate rate) {
         return "rates/new";
     }
 
@@ -29,7 +29,7 @@ public class RateController {
     }
 
     @PostMapping
-    public String create(@ModelAttribute("rates") Rate rate) {
+    public String create(Rate rate) {
         rateService.create(rate);
         return "redirect:/rates";
     }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="shedule">
+        <div class="container">
+            <div th:class="container-fluid" th:each="event: ${events}">
+                <div class="timetable-item-img">
+                    <img src="https://via.placeholder.com/100x80/008B8B/000000">
+                </div>
+                <div class="timetable-item-main">
+                    <div class="timetable-item-time" th:text="${event.time}"></div>
+                    <div class="timetable-item-day" th:text="${event.tagDay}"></div>
+                    <div class="timetable-item-name" th:text="${event.name}"></div>
+                    <div class="timetable-item-description" th:text="${event.description}"></div>
+                </div>
+                <form th:action="@{/events/{id}(id=${event.getId()})}" th:method="DELETE">
+                    <input class="btn btn-primary" type="submit" value="Удалить" />
+                </form>
+                <br>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

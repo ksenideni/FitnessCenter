@@ -18,7 +18,7 @@ public class TrainingController {
     }
 
     @GetMapping("/new")
-    public String newFAQ(@ModelAttribute("training") Training training) {
+    public String newTraining(@ModelAttribute("training") Training training) {
         return "training/new";
     }
 
