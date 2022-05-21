@@ -16,8 +16,10 @@ public class EventService {
     private final EventMapper eventMapper;
 
     public List<EventDTO> findAll() {
-        return eventRepository.findAll().stream()
+        List<EventDTO> allEvents = eventRepository.findAll().stream()
                 .map(eventMapper::fromEntity).toList();
+        System.out.println(allEvents);
+        return allEvents;
     }
 
     public void deleteById(Long id) {

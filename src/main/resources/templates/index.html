@@ -54,7 +54,7 @@
                 <div th:class="${iter.index == 0} ? 'carousel-item active' : 'carousel-item'"
                      th:each="rate, iter:${rates}">
                     <div class="img-wrapper">
-                        <img class="d-block" src=img/123.jpg>
+                        <img class="d-block" th:src="'img/' + ${iter.index%3+1} + '.jpg'">
                     </div>
                     <div class="container">
                         <div class="carousel-caption">
@@ -95,8 +95,8 @@
                         <div class="tab-content">
                             <div class="tab-pane show active">
                                 <div class="row">
-                                    <div th:class="'card-ftn ' + ${event.tagDay}+ ' col-md-6'"
-                                         th:each="event: ${events}">
+                                    <div th:each="event: ${events}"
+                                         th:class="'card-ftn ' + ${event.tagDay}+ ' col-md-6'">
                                         <div class="timetable-item">
                                             <div class="timetable-item-img">
                                                 <img src="https://via.placeholder.com/100x80/008B8B/000000">

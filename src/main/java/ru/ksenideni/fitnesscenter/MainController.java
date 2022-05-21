@@ -15,7 +15,7 @@ public class MainController {
     private final EventService eventService;
     private final RateService rateService;
 
-    @GetMapping()
+    @GetMapping("/fitness")
     public String index(Model model) {
         model.addAttribute("faqs", faqService.findAll());
         model.addAttribute("events", eventService.findAll());
