@@ -3,7 +3,6 @@ package ru.ksenideni.fitnesscenter.security;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configurers.provisioning.JdbcUserDetailsManagerConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -36,7 +35,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .cors().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/fitness/**").permitAll()
+                .antMatchers("/fitness").permitAll()
+                .antMatchers("/styles/**").permitAll()
+                .antMatchers("/img/**").permitAll()
+                .antMatchers("/scripts/**").permitAll()
                 .anyRequest().hasRole(UserRole.ADMIN.name())
                 .and()
                 .httpBasic();
