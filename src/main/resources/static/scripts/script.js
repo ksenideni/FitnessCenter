@@ -17,6 +17,6 @@ function dayListenner() {
     }
     let arrOfActiveCard = document.getElementsByClassName(id)
     for (let i = 0; i < arrOfActiveCard.length; i++) {
-        arrOfCard[i].hidden = false
+        arrOfActiveCard[i].hidden = false
     }
 }
