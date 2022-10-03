@@ -2,7 +2,7 @@ package ru.ksenideni.fitnesscenter.events;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.ksenideni.fitnesscenter.training.Training;
+import ru.ksenideni.fitnesscenter.EventCreatingDTO;
 import ru.ksenideni.fitnesscenter.training.TrainingService;
 
 import java.util.List;

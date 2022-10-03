@@ -55,7 +55,7 @@ class EventServiceTest {
         assertEquals(2, eventDTOS.size(), "Size of result should be equal 2");
         var event1 = eventDTOS.get(0);
         assertEquals(1L, event1.getId(), "id should be equal");
-        var event2 = eventDTOS.get(0);
+        var event2 = eventDTOS.get(1);
         assertEquals(2L, event2.getId(), "id should be equal");
     }
 

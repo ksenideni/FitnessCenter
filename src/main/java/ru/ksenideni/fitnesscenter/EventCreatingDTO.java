@@ -1,6 +1,7 @@
-package ru.ksenideni.fitnesscenter.events;
+package ru.ksenideni.fitnesscenter;
 
 import lombok.*;
+import ru.ksenideni.fitnesscenter.events.DayOfWeek;
 
 import java.time.LocalTime;
 @Getter

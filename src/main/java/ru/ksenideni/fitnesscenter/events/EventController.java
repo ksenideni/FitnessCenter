@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.ksenideni.fitnesscenter.rates.Rate;
+import ru.ksenideni.fitnesscenter.EventCreatingDTO;
 
 @Controller
 @RequiredArgsConstructor
